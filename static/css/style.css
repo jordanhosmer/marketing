@@ -1738,7 +1738,7 @@ section * {
   }
 }
 header.header-8 {
-  height: 92px;
+  height: 65px;
 }
 header.header-8 .header-background {
   background-color: transparent;
@@ -1753,16 +1753,23 @@ header.header-8 .navbar .navbar-collapse {
 header.header-8 .navbar .nav {
   text-align: right;
 }
+header.header-8 .navbar .nav li a {
+  padding-top: 18px;
+  font-size: 15px;
+}
 header.header-8 .navbar .nav li a.btn {
   color: white;
   height: inherit;
-  padding: 10px 15px;
+  padding: 8px 13px;
 }
 header.header-8 .navbar .nav li a.btn:hover {
   background-color: #2ecc71;
 }
-header.header-8 .navbar a.brand img:first-child {
-  height: 32px;
+header.header-8 .navbar a.brand {
+  padding-top: 20px;
+}
+header.header-8 .navbar a.brand img {
+  height: 28px;
   margin: 2px 15px 0 0;
   padding-top: 2px;
 }
@@ -1802,9 +1809,9 @@ footer {
 }
 .content-11 {
   background-color: transparent;
-  border-top: 1px solid #9ce6f1;
-  border-bottom: 1px solid #9ce6f1;
-  color: #2ccae2;
+  border-top: 1px solid #c8f1f8;
+  border-bottom: 1px solid #c8f1f8;
+  color: #42d0e5;
 }
 .content-11 .btn {
   background-color: #42d0e5;
@@ -1818,14 +1825,14 @@ footer {
   line-height: 27px;
 }
 .content-15.intro {
-  padding-top: 65px;
+  padding-top: 45px;
 }
 .content-15 h2 {
-  font-size: 40px;
-  margin-bottom: 20px;
+  font-size: 34px;
+  margin-bottom: 17px;
 }
 .content-15 h3 {
-  font-size: 24px;
+  font-size: 23px;
   line-height: 38px;
   margin-bottom: 60px;
 }

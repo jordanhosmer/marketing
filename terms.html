@@ -34,8 +34,8 @@
 							<ul class="nav text-right pull-right">
 								<li><a href="http://medium.com/@LawPalHQ" taget="_blank">Blog</a></li>
 <!-- 								<li><a href="/updates.html">Updates</a></li>
- -->								<li class="hidden-sm hidden-xs"><a class="btn btn-success" href="http://eepurl.com/NsEfD" onClick="_gaq.push(['_trackEvent', 'Action', 'preregister', 'nav']);">Pre-register</a></li>
-								<li class="hidden-md hidden-lg"><a href="http://eepurl.com/NsEfD" onClick="_gaq.push(['_trackEvent', 'Action', 'preregister', 'nav']);">Pre-register</a></li>
+ -->								<li class="hidden-sm hidden-xs"><a class="btn btn-success prereg" href="http://eepurl.com/NsEfD">Pre-register</a></li>
+								<li class="hidden-md hidden-lg"><a href="http://eepurl.com/NsEfD" class="prereg">Pre-register</a></li>
 							</ul>
 							
 						</div>
@@ -52,7 +52,7 @@
     <div class="title">
       <img src="/static/framework/common-files/icons/Shield@2x.png" width="100" height="100" alt="">
       <h3>Terms and Conditions</h3>
-      <div class="submitted">Last Updated  18 Mar</div>
+      <div class="submitted">Last Updated  19 Mar</div>
     </div>
     <p>
         PLEASE READ THESE TERMS OF USE CAREFULLY. BY ACCESSING OR USING THIS WEB SITE OR OUR SERVICES, YOU AGREE TO BE BOUND BY AND ACCEPT THE TERMS OF USE DESCRIBED HEREIN AND ALL TERMS, GUIDELINES AND DISCLOSURES INCORPORATED BY REFERENCE. THESE TERMS INCLUDE VARIOUS LIMITATIONS AND EXCLUSIONS, AND A CLAUSE THAT GOVERNS THE JURISDICTION AND VENUE OF DISPUTES.
@@ -486,6 +486,8 @@ Menlo Park,<br>
 
 	
 
+
+
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -493,6 +495,14 @@ Menlo Park,<br>
 	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 	  ga('create', 'UA-36042667-2', 'lawpal.com');
 	  ga('send', 'pageview');
+	</script>
+
+	<script>
+	$( document ).ready(function() {
+		$('.prereg').on('click', function() {
+		  ga('send', 'click', 'button', 'mailchimp', 'mailchimp');
+		});
+	});
 	</script>
 
     <!-- begin olark code -->

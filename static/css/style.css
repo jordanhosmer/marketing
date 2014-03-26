@@ -961,7 +961,7 @@ section * {
   text-transform: none;
 }
 .blog-3 .title {
-  margin-bottom: 84px;
+  margin-bottom: 44px;
   text-align: center;
 }
 .blog-3 .title h3 {
@@ -970,10 +970,17 @@ section * {
   font-weight: 300;
   letter-spacing: -1px;
 }
+.blog-3 .title h4 {
+  font-size: 24px;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
 .blog-3 .title .submitted {
   font-size: 16px;
-  color: #bdc3c7;
-  margin-top: 15px;
+  color: #889299;
+  margin-top: 25px;
+  line-height: 23px;
 }
 .blog-3 .title img {
   display: block;
@@ -2042,7 +2049,7 @@ header.header-8 .navbar a.brand img {
   opacity: 1;
   background-size: cover;
   background-position: center center;
-  height: 680px;
+  height: 560px;
   padding-top: 125px;
 }
 .bg-lawpal-preview h3 {

@@ -39,6 +39,8 @@ env.environment = 'local'
 env.truthy = ['true','t','y','yes','1',1]
 env.falsy = ['false','f','n','no','0',0]
 
+env.dist_path = os.path.join(env.local_project_path, '.build')
+
 
 @task
 def production():
@@ -117,7 +119,7 @@ def git_set_tag():
 def git_export(branch='master'):
   env.SHA1_FILENAME = get_sha1()
   if not os.path.exists('/tmp/%s.zip' % env.SHA1_FILENAME):
-      local('git archive --format zip --output /tmp/%s.zip --prefix=%s/ %s' % (env.SHA1_FILENAME, env.SHA1_FILENAME, branch,), capture=False)
+      local('git archive --format zip --output /tmp/%s.zip --prefix=%s/ %s %s' % (env.SHA1_FILENAME, env.SHA1_FILENAME, branch, env.dist_path,), capture=False)
 
 @task
 @runs_once
@@ -281,4 +283,3 @@ def deploy(is_predeploy='False',full='False',db='False',search='False'):
 
     relink()
     clean_start()
-

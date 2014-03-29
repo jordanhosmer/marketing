@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}
+Thanks!
+{% endblock title %}
+{% block content %}
+<script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		
+		// Add the missing url to the text
+		$("#url").text(window.location.pathname);
+		
+		// Fix the css locations dynamically
+		$("head link").each(function() {
+			for (var i=0; i<window.location.pathname.split(/\//g).length-2; i++)
+				$(this).attr("href", "../" + $(this).attr("href"));
+		});
+		
+	})
+</script>
+	<div class="page-wrapper">
+		<div class="container text-center">
+			<br />
+			<h2 class="text-center">Thanks! Nearly there...</h2>
+			<br />
+			<br /> 
+			<p>We need to confirm your email address.<br />
+			To complete the subscription process, please click the link in the email we just sent you.</p>
+		</div>
+	</div>
+{% endblock %}

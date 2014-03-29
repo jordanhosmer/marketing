@@ -1,64 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	
-	<title>LawPal Platform Updates</title>
-	
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-	<link rel="shortcut icon" href="framework/flat-ui/images/favicon.ico">
-	<link rel="stylesheet" href="/static/framework/flat-ui/bootstrap/css/bootstrap.css">
-	<link rel="stylesheet" href="/static/framework/flat-ui/css/flat-ui.css">
-	<!-- Using only with Flat-UI (free)-->
-	<link rel="stylesheet" href="/static/framework/common-files/css/icon-font.css">
-	<!-- end -->
-	<link rel="stylesheet" href="/static/css/style.css">
-	
-</head>
+{% extends 'base.html'%}
 
-<body>
-	<div class="page-wrapper">
-		
-		<header class="header-8">
-			<div class="container">
-				<div class="row">
-					<div class="navbar col-sm-12" role="navigation">
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle"></button>
-							<a class="brand" href="/">
-								<img src="/static/images/logo.png" alt="LawPal">
-							</a>
-						</div>
-						<div class="collapse navbar-collapse">
-							<ul class="nav text-right pull-right">
-								<li><a href="http://medium.com/@LawPalHQ" taget="_blank">Blog</a></li>
-								<li class="hidden-sm hidden-xs"><a class="prereg" href="http://app.lawpal.com/">Sign In</a></li>
+{% block title %}LawPal Platform Updates{% endblock title %} 
 
-								<li class="hidden-sm hidden-xs"><a class="btn btn-success prereg" href="http://app.lawpal.com/start/signup/">Sign Up</a></li>
-
-<!-- 								<li class="hidden-md hidden-lg"><a href="http://eepurl.com/NsEfD" class="prereg">Pre-register</a></li>
- -->							</ul>
-							
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="header-background"></div>
-		</header>
-		
-
-		
+{% block content %}
 <!-- <section class="blog-3">
     <div class="container text-center">
-      <img src="/static/images/logo-mark.png" width="100" height="100" alt="">
+      <img src="{% static 'images/logo-mark.png' %}" width="100" height="100" alt="">
       <h2>How LawPal Works</h2>
     </div>
   </section> -->
 
   <section class="content-33">
         <div class="container">
-          <img src="/static/images/logo-mark.png" width="150" vspace="30px">
+          <img src="{% static 'images/logo-mark.png' %}" width="150" vspace="30px">
           <p class="lead">How LawPal Works</p>
           <p>A walk through of the anatomy of a LawPal Project</p>
         </div>
@@ -72,8 +26,8 @@
               <p>View all your projects at glance. Get notifications on signuatures, comments and added documents all from a single view.</p>
               <div class="box">
                 <div class="img">
-                  <img src="/static/images/screenies/dashboard.png" width="100%">
-                  <img src="/static/images/screenies/dashboard.png" width="100%">
+                  <img src="{% static 'images/screenies/dashboard.png' %}" width="100%">
+                  <img src="{% static 'images/screenies/dashboard.png' %}" width="100%">
                 </div>
               </div>
             </div>
@@ -88,8 +42,8 @@
                   <div class="box">
                     <div class="img">
                 <div class="img">
-                  <img src="/static/images/screenies/checklist.png">
-                  <img src="/static/images/screenies/checklist.png">
+                  <img src="{% static 'images/screenies/checklist.png' %}">
+                  <img src="{% static 'images/screenies/checklist.png' %}">
                     </div>
                   </div>
                 </div>
@@ -165,57 +119,4 @@
       </section>
 
 
-
-		
-		<footer class="footer-7 ">
-			<div class="container">
-				<a href="#"><span class="fui-home"> </span></a>
-				<nav>
-					<ul>
-						<li class="scroll-btn">
-							<a href="#" class="scroll-top fui-arrow-up"></a>
-						</li>
-						<li><a href="/terms.html">Terms</a>
-						</li>
-						<li><a href="/privacy.html">Privacy</a>
-						</li>
-												<li><a href="/press.html">Press</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
-		</footer> 
-		
-	</div>
-
-
-	
-	<script src="/static/framework/common-files/js/jquery-1.10.2.min.js"></script>
-	<script src="/static/framework/common-files/js/page-transitions.js"></script>
-
-	<script src="/static/js/main.js"></script>
-
-	<script src="/static/js/script.js"></script>
-
-	
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="/static/framework/flat-ui/js/bootstrap.min.js"></script>
-	<script src="/static/framework/common-files/js/modernizr.custom.js"></script>
-	<script src="/static/framework/common-files/js/jquery.parallax.min.js"></script>
-	
-
-	
-
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-	  ga('create', 'UA-36042667-2', {
-		  'cookieDomain': 'none'
-		});
-	  ga('send', 'pageview');
-	</script>
-
-</body>
-</html>
+{% endblock content %}

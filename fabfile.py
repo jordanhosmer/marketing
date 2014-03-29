@@ -253,6 +253,25 @@ def requirements():
     env_run('pip install -r %s' % requirements_path )
 
 
+@task
+def clean_versions(delete=False, except_latest=3):
+    current_version = get_sha1()
+
+    versions_path = '%sversions' % env.remote_project_path
+    #
+    # cd into the path so we can use xargs
+    # tail the list except the lastest N
+    # exclude the known current version
+    #
+    cmd = "cd {path};ls -t1 {path} | tail -n+{except_latest} | grep -v '{current_version}'".format(path=versions_path, except_latest=except_latest, current_version=current_version)
+    #
+    # optionally delete them
+    #
+    if delete in env.truthy:
+        cmd = cmd + ' | xargs rm -Rf'
+
+    virtualenv(cmd)
+
 
 @task
 @serial

@@ -41,7 +41,6 @@ env.falsy = ['false','f','n','no','0',0]
 
 env.dist_path = os.path.join(env.local_project_path, '.build')
 
-
 @task
 def production():
     env.environment = 'production'
@@ -109,17 +108,14 @@ def git_set_tag():
         tag = prompt(colored('Please enter a tag: previous: %s suggested: %s' % (suggested['previous'], suggested['next']), 'yellow'), default=suggested['next'])
         if tag:
             tag = 'v%s' % tag if tag[0] != 'v' else tag # ensure we start with a "v"
-
-            #message = env.deploy_desc if 'deploy_desc' in env else prompt(colored('Please enter a tag comment', 'green'))
             env.repo.create_tag(tag)
-#            local('git tag -a %s -m "%s"' % (tag, comment))
-#            local('git push origin %s' % tag)
 
 @task
 def git_export(branch='master'):
   env.SHA1_FILENAME = get_sha1()
   if not os.path.exists('/tmp/%s.zip' % env.SHA1_FILENAME):
-      local('git archive --format zip --output /tmp/%s.zip --prefix=%s/ %s %s' % (env.SHA1_FILENAME, env.SHA1_FILENAME, branch, env.dist_path,), capture=False)
+        cmd = 'cd %s;git archive --format zip --output /tmp/%s.zip --prefix=%s %s %s' % (env.local_project_path, env.SHA1_FILENAME, env.SHA1_FILENAME, branch, os.path.basename(os.path.normpath(env.dist_path)),)
+        local(cmd, capture=False)
 
 @task
 @runs_once
@@ -191,7 +187,7 @@ def relink():
             #if files.exists(project_path, use_sudo=True): # unlink the glynt dir
             if files.exists('%s/%s' % (env.remote_project_path, env.project)): # check the current glynt dir exists
                 env_run('unlink %s' % project_path)
-            env_run('ln -s %s/%s %s' % (version_path, env.SHA1_FILENAME, project_path,)) # relink
+            env_run('ln -s %s/%s%s %s' % (version_path, env.SHA1_FILENAME, os.path.basename(os.path.normpath(env.dist_path)), project_path,)) # relink
 
 @task
 def clean_start():
@@ -270,7 +266,7 @@ def clean_versions(delete=False, except_latest=3):
     if delete in env.truthy:
         cmd = cmd + ' | xargs rm -Rf'
 
-    virtualenv(cmd)
+    env_run(cmd)
 
 
 @task
@@ -280,7 +276,6 @@ def diff():
     diff = prompt(colored("View diff? [y,n]", 'magenta'), default="y")
     if diff.lower() in ['y','yes', 1, '1']:
         print(diff_outgoing_with_current())
-
 
 
 @task

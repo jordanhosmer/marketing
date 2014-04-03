@@ -2,7 +2,7 @@
 
 {% extends 'base.html'%}
 
-{% block title %}LawPal{% endblock title %} 
+{% block title %}LawPal{% endblock title %}
 
 {% block content %}
     <section class="header-8-sub bg-midnight-blue bg-lawpal-preview">
@@ -13,7 +13,7 @@
           </div>
         </div>
       </div>
-    </section>  
+    </section>
     <section class="content-15 v-center intro">
       <div>
         <div class="container">
@@ -21,7 +21,7 @@
             <h2 class="text-center">Makes practice perfect.</h2>
             <h3 class="col-sm-12">
             LawPal is the best way for lawyers to stay on top of every project. <br />
-            Better tools and better communication make for better lawyers and happier clients. 
+            Better tools and better communication make for better lawyers and happier clients.
             </h3>
           </div>
           <div class="row">
@@ -56,11 +56,11 @@
               </div>
               <div class="col-sm-5 col-sm-offset-1 col-xs-12">
                 <h6>Intuitive Organization</h6>
-                <p>You have a million things to do, but you can only do one thing at a time. Create a workspace for each client matter.</p> 
+                <p>You have a million things to do, but you can only do one thing at a time. Create a workspace for each client matter.</p>
                 <h6>Collaboration</h6>
-                <p>Legal work is inherently collaborative. Get everyone onboard and see your deal progress in real time.  You’ll always see the big picture.  Never ask “Who’s doing what?” or “What’s the holdup?” again.</p> 
+                <p>Legal work is inherently collaborative. Get everyone onboard and see your deal progress in real time.  You’ll always see the big picture.  Never ask “Who’s doing what?” or “What’s the holdup?” again.</p>
                 <h6>Centralized Discussion</h6>
-                <p>Keep your team communications in one place. No more notepads, emails or post-it reminders stuck to your computer screen.  LawPal keeps everyone up to date with detailed activity reports. </p> 
+                <p>Keep your team communications in one place. No more notepads, emails or post-it reminders stuck to your computer screen.  LawPal keeps everyone up to date with detailed activity reports. </p>
                 <div class="hidden-sm hidden-xs">
                   <h6 class="hidden-sm">Cloud Sync and Storage</h6>
                   <p class="hidden-sm">Import your documents from any cloud storage platform and sync final right back there.</p>
@@ -91,7 +91,7 @@
     <section class="ipad-break">
     </section>
 
-<!-- 
+<!--
     <section class="price-4">
       <div class="container">
 
@@ -276,4 +276,14 @@
       </section>
 
     <!-- footer-7 -->
-    {% endblock content %}
+{% endblock content %}
+
+{% block mixpanel %}
+    <script type="text/javascript">
+    mixpanel.track('page.view', {
+        'page': 'homepage',
+        'page_name': document.title,
+        'url': window.location.pathname
+    });
+    </script>
+{% endblock %}

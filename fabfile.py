@@ -40,6 +40,7 @@ env.truthy = ['true','t','y','yes','1',1]
 env.falsy = ['false','f','n','no','0',0]
 
 env.dist_path = os.path.join(env.local_project_path, '.build')
+env.zip_extracted_folder_name = os.path.basename(os.path.normpath(env.dist_path))
 
 @task
 def production():
@@ -113,8 +114,9 @@ def git_set_tag():
 @task
 def git_export(branch='master'):
   env.SHA1_FILENAME = get_sha1()
+
   if not os.path.exists('/tmp/%s.zip' % env.SHA1_FILENAME):
-        cmd = 'cd %s;git archive --format zip --output /tmp/%s.zip --prefix=%s %s %s' % (env.local_project_path, env.SHA1_FILENAME, env.SHA1_FILENAME, branch, os.path.basename(os.path.normpath(env.dist_path)),)
+        cmd = 'cd %s;git archive --format zip --output /tmp/%s.zip --prefix=%s %s %s' % (env.local_project_path, env.SHA1_FILENAME, env.SHA1_FILENAME, branch, env.zip_extracted_folder_name,)
         local(cmd, capture=False)
 
 @task
@@ -179,15 +181,14 @@ def relink():
         env.SHA1_FILENAME = get_sha1()
 
     version_path = '%sversions' % env.remote_project_path
-    full_version_path = '%s/%s' % (version_path, env.SHA1_FILENAME)
     project_path = '%s%s' % (env.remote_project_path, env.project,)
 
     if not env.is_predeploy:
-        if files.exists('%s/%s' % (version_path, env.SHA1_FILENAME)): # check the sha1 dir exists
+        if files.exists('%s/%s%s' % (version_path, env.SHA1_FILENAME, env.zip_extracted_folder_name)): # check the sha1 dir exists
             #if files.exists(project_path, use_sudo=True): # unlink the glynt dir
             if files.exists('%s/%s' % (env.remote_project_path, env.project)): # check the current glynt dir exists
                 env_run('unlink %s' % project_path)
-            env_run('ln -s %s/%s%s %s' % (version_path, env.SHA1_FILENAME, os.path.basename(os.path.normpath(env.dist_path)), project_path,)) # relink
+            env_run('ln -s %s/%s%s %s' % (version_path, env.SHA1_FILENAME, env.zip_extracted_folder_name, project_path,)) # relink
 
 @task
 def clean_start():
@@ -200,7 +201,7 @@ def do_deploy():
         env.SHA1_FILENAME = get_sha1()
 
     version_path = '%sversions' % env.remote_project_path
-    full_version_path = '%s/%s' % (version_path, env.SHA1_FILENAME)
+    full_version_path = '%s/%s%s' % (version_path, env.SHA1_FILENAME, env.zip_extracted_folder_name)
     project_path = '%s%s' % (env.remote_project_path, env.project,)
 
     if env.environment_class in ['production', 'celery']:
@@ -211,7 +212,7 @@ def do_deploy():
     deploy_archive_file()
 
     # extract project zip file:into a staging area and link it in
-    if not files.exists('%s/manage.py'%full_version_path):
+    if not files.exists('%s/manage.py' % full_version_path):
         unzip_archive()
 
 

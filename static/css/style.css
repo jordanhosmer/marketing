@@ -2307,6 +2307,41 @@ ul.features li span {
   margin-right: 10px;
   opacity: 0.7;
 }
+section.privacy {
+  font-size: 16px;
+  color: #444;
+}
+section.privacy p {
+  font-size: 16px;
+}
+section.privacy p + p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+section.privacy ul {
+  margin: 0px 0px 0px 0px;
+}
+section.privacy ul li {
+  margin: 10px 0px 10px 0px;
+  line-height: 1.722169;
+}
+section.privacy ol {
+  list-style-type: upper-alpha;
+  margin: 0px 0px 0px 0px;
+}
+section.privacy ol li {
+  margin: 10px 0px 10px 0px;
+  line-height: 1.722169;
+}
+section.privacy ol ol {
+  list-style-type: upper-roman;
+}
+section.privacy ol ol ol {
+  list-style-type: lower-alpha;
+}
+section.privacy ol ol ol ol {
+  list-style-type: lower-roman;
+}
 section.privacy h6 {
-  margin-top: 25px;
+  margin: 25px 0px 10px 0px;
 }

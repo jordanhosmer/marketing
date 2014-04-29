@@ -1298,7 +1298,7 @@ section * {
   position: absolute;
   right: 0;
   height: 100%;
-  width: 1000px;
+  width: 140%;
   margin: 0;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -2952,14 +2952,25 @@ footer {
   margin-bottom: 17px;
 }
 .content-15 h3 {
-  font-size: 38px;
-  line-height: 55px;
-  margin-bottom: 45px;
+  font-size: 55px;
+  line-height: 68px;
+  margin-bottom: 10px;
+}
+.content-15 h4 {
+  margin-top: 4px;
+  margin-bottom: 40px;
+  font-size: 21px;
+  font-weight: normal;
+  color: #888;
 }
 .content-15 strong {
-  color: #42d0e5;
-  font-size: 22px;
+  color: #1797aa;
   font-weight: normal;
+}
+.content-15 p.lead {
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 1.4em;
 }
 .content-15 .btn {
   width: 220px;
@@ -2968,7 +2979,7 @@ footer {
   margin-top: 90px;
 }
 .content-15 .features h6 {
-  color: #f88172;
+  color: #1797aa;
   margin: 30px 0px 10px 0px;
 }
 .content-15 .features p {
@@ -2979,6 +2990,9 @@ footer {
   display: block;
   margin: 0 auto 25px;
   text-align: center;
+}
+.content-17 blockquote {
+  line-height: 1.55em;
 }
 .content-17 .author {
   margin-top: 57px;
@@ -3105,6 +3119,8 @@ footer {
 }
 .crew-2 h3 {
   text-align: center;
+  margin-bottom: 30px;
+  margin-top: 25px;
 }
 .crew-2 .members .name {
   bottom: 14px;
@@ -3247,4 +3263,7 @@ section.privacy h6 {
   border-bottom: none;
   padding-bottom: 55px;
   background-color: #fafafa;
+}
+.content-19 .col-sm-7 .quote .quote-text {
+  font-size: 31px;
 }

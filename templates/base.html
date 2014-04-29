@@ -5,6 +5,7 @@
 	{% block header %}
 	<title>{% block title %}Default{% endblock title %}</title>
 	{% endblock header %}
+	<meta name="description" content="{% block description %}{% endblock description %}" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 	<link rel="shortcut icon" href="{% static 'framework/flat-ui/images/favicon.ico' %}">
@@ -12,7 +13,7 @@
 	<link rel="stylesheet" href="{% static 'framework/flat-ui/css/flat-ui.css' %}">
 	<!-- Using only with Flat-UI (free)-->
 	<link rel="stylesheet" href="{% static 'framework/common-files/css/icon-font.css' %}">
-<link rel="stylesheet" href="{% static 'pe-icon-7-stroke/css/pe-icon-7-stroke.css' %}">
+	<link rel="stylesheet" href="{% static 'pe-icon-7-stroke/css/pe-icon-7-stroke.css' %}">
 
 	<!-- end -->
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -94,7 +95,6 @@
 	        location.href = location.href.replace("http://", "https://");
 	    }
 	}
-	RedirNonHttps();
 	</script>
 
 	<script>

@@ -156,14 +156,25 @@ body > section, footer {
         margin-bottom:17px;
     }
     h3 {
-        font-size:38px;
-        line-height:55px;
-        margin-bottom:45px;
+        font-size:55px;
+        line-height:68px;
+        margin-bottom:10px;
+    }
+    h4 {
+        margin-top:4px;
+        margin-bottom:40px;
+        font-size:21px;
+        font-weight: normal;
+        color:#888;
     }
     strong {
-            color:@lp-blue;
-            font-size:22px;
-            font-weight:normal;
+            color:darken(@lp-blue, 20%);
+            font-weight: normal;
+    }
+    p.lead {
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 1.4em;
     }
     .btn {
         width:220px;
@@ -171,7 +182,7 @@ body > section, footer {
     .features {
         margin-top:90px;
         h6 {
-        color:#f88172;
+        color:darken(@lp-blue, 20%);
             margin:30px 0px 10px 0px;
         }
         p {
@@ -185,6 +196,9 @@ body > section, footer {
           display: block;
           margin: 0 auto 25px;
           text-align: center;
+    }
+    blockquote {
+        line-height: 1.55em;
     }
     .author {
         margin-top:57px;
@@ -303,6 +317,8 @@ body > section, footer {
     padding-bottom:0px;
     h3 {
         text-align: center;
+        margin-bottom:30px;
+        margin-top:25px;
     }
     .members {
         .name {
@@ -461,5 +477,8 @@ section.privacy  {
     border-bottom:none;
     padding-bottom:55px;
     background-color:#fafafa;
+}
+.content-19 .col-sm-7 .quote .quote-text{
+    font-size:31px;
 }
 

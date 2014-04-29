@@ -15,7 +15,7 @@ body, html, .page-wrapper {
     <div class="container" >
       <div class="row">
         <div class="col-sm-5" >
-          <div style="background:url('{% for post in posts %}{% if forloop.first %}{{ post.coverImg }}{%endif%}{%endfor%}');background-size:cover;position:absolute;top:0;background-position:300px 0px;" class="full"></div>
+          <div style="background:url('{% for post in posts %}{% if forloop.first %}{{ post.coverImg }}{%endif%}{%endfor%}');background-size:cover;position:absolute;top:0;background-position:center;background-repeat:no-repeat;" class="full"></div>
           <div class="overlay">
             <a href="/"><img src="{% static 'images/logo-white.png' %}" class="logo"></a> <a href="/blog.html">/blog</a>
           </div>

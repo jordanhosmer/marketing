@@ -21,22 +21,52 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>/posts/an-example-post.html</loc>
+        <loc>/legal-project-management.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>/posts/another-example.html</loc>
+        <loc>/posts/adaptability-the key-to-success-for-mid-size-firms.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>/posts/getting-started.html</loc>
+        <loc>/posts/and-the-winner-is.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>/posts/lawpal-goes-to-harvart.html</loc>
+        <loc>/posts/are-we-being-innovative-enough.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>/posts/are-your-clients-happy.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>/posts/engagement-letter.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>/posts/lawpal-goes-to-harvard.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>/posts/show-your-lawyer-some-love.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>/posts/story-of-lawpal.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>/posts/we-are-live.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
@@ -67,11 +97,6 @@
     </url>
     <url>
         <loc>/updates.html</loc>
-        <changefreq>daily</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>/welcome.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>

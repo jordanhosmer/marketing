@@ -2,18 +2,19 @@
  * Blog 2 stylesheet  
  * */
  .blog-2 {
-    padding-top: 200px;
+    padding-top: 0px;
     padding-bottom: 200px;
     @media (max-width: 768px) {
         padding-top: 80px;
         padding-bottom: 80px;
     }
-    position: relative;
+    position: fixed;
+    width:100%;
     background-color: @clouds;
     font-family: @font-family-demo;
     color: #35495d;
     h3 {
-        margin: 0 0 20px;
+        margin: 0 0 10px;
         font-size: 35px;
         font-weight: 500;
         font-family: @font-family-demo;
@@ -41,9 +42,25 @@
         line-height: 1.85;
         margin: 0;
         font-size: 16px;
-        & + p {
+        & + p { 
             margin-top: 20px;
         }
+        &.lead {
+            font-size: 20px;
+            margin-bottom:20px;
+            line-height: 1.4em;
+        }
+    }
+    aside.dates {
+       border:1px solid #ddd;
+       border-radius: 5px;
+       display:inline-block;
+       width: auto;
+       padding:4px 12px;
+       margin-bottom:10px;
+       text-align: center;
+       color:#888;
+       font-size:13px;
     }
     > * {
         position: relative;
@@ -57,19 +74,21 @@
     }
     .background {
         display: block;
-        position: absolute;
+        position: fixed;
+        z-index: 5;
         left: 0;
         right: 0;
         top: 0;
         bottom: 0;
+        height:100%;
         .opacity(100);
         > .container {
             height:100%;
         }
-        .col-sm-4 {
+        .col-sm-5 {
             position: absolute;
             height: 100%;
-            > div {
+            > div.full {
                 position: absolute;
                 right: 0;
                 height: 100%;
@@ -81,6 +100,71 @@
                 margin: 0;
                 .background-size(cover);
             }
+        }
+        .overlay {
+            position:absolute;
+            top:0;
+            left:0;
+            z-index: 500;
+            padding-top:24px;
+            color:white;
+            .logo {
+                height:25px;
+                margin-bottom:14px;
+                margin-right:5px;
+            }
+            a {
+                font-size:20px;
+                font-weight: normal;
+                color:white;
+            }
+        }
+    }
+    .container.blog {
+        overflow: scroll;
+        opacity:0.6;
+        max-height: 100vh;
+        margin-top:55px;
+        z-index: 6;
+        padding-top: 50px;
+        padding-bottom:150px;
+        a {
+            color:darken(@midnight-blue, 15%);
+        }
+        .more {
+            h5 {
+                margin-top:10px;
+                margin-bottom:2px;
+                color: @belize-hole;
+            }
+            .lead, .lead + .lead {
+                font-size:15px;
+                line-height: 1.4em;
+                margin:0px 0px 0px 0px;
+            }
+            .lead + .lead {
+                color: #aaa;
+                margin-bottom:25px;
+                font-size:13px;
+            }
+        }
+        hr {
+            border-color: #cfcfcf;
+            border-width: 2px;
+            margin:25px 0px;
+        }
+        .btn {
+            color:white;
+        }
+        iframe#twitter-widget-0 {
+            margin-top:10px;
+            margin-bottom:20px;
+        }
+        h3.prev {
+            text-transform: uppercase;
+            font-size:15px;
+            font-weight: bold;
+            color:#888;
         }
     }
     @media (max-width: 480px) {

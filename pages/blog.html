@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block title %}LawPal Blog{% endblock title %}
+
+{% block navbar %}
+<style>
+body, html, .page-wrapper {
+  height:100%;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<section class="blog-2">
+  <div class="background hidden-xs" >
+    <div class="container" >
+      <div class="row">
+        <div class="col-sm-5" >
+          <div style="background:url('{% for post in posts %}{% if forloop.first %}{{ post.coverImg }}{%endif%}{%endfor%}');background-size:cover;position:absolute;top:0;background-position:300px 0px;" class="full"></div>
+          <div class="overlay">
+            <a href="/"><img src="{% static 'images/logo-white.png' %}" class="logo"></a> <a href="/blog.html">/blog</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container blog">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-6">
+        <div class="visible-xs">
+          <img src="{% static 'images/logo.png' %}" style="height:40px;margin-bottom:150px;margin-top:-80px;">
+        </div>
+        {% for post in posts %}
+          {% if forloop.first %}
+            <a href='/{{ post.path }}'><aside class="dates hidden-xs">{{ post.date|date:"M j" }} by {{post.author}}</aside></a>
+            <h3><a href='/{{ post.path }}'>{{ post.title }} </a></h3>
+            <p class="lead">{{ post.headline }}</p>
+            <br />
+            {{post.body}}
+            
+           <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://lawpal.com/{{ post.path }}" data-via="alexhalliday" data-size="large">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            <hr />
+            <h3 class="prev">Previous Posts</h3>
+            {% else %}
+            <div class="more">
+              <h5><a href='/{{ post.path }}'>{{ post.title }} </a></h5>
+              <p class="lead">{{ post.headline }}</p>
+              <p class="lead">{{ post.author }} on {{ post.date|date:"M j" }}</p>
+            </div>
+          {% endif %}
+         {% endfor %}
+          <br />
+          <br />
+          <br />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+{% endblock content %}
+{% block footer %}{% endblock %}

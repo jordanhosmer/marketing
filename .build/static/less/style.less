@@ -10,7 +10,11 @@
 
 /* header */
 @import '../framework/ui-kit/ui-kit-header/less/header-8.less';
+@import '../framework/ui-kit/ui-kit-header/less/header-11.less';
+/* blog */
 
+
+@import '../framework/ui-kit/ui-kit-blog/less/blog-2.less';
 
 @import '../framework/ui-kit/ui-kit-blog/less/blog-3.less';
 
@@ -18,9 +22,9 @@
 /* content */
 /*@import '../framework/ui-kit/ui-kit-content/less/content-2.less';
 @import '../framework/ui-kit/ui-kit-content/less/content-4.less';
-
-@import '../framework/ui-kit/ui-kit-content/less/content-9.less';
 */
+@import '../framework/ui-kit/ui-kit-content/less/content-4.less';
+
 @import '../framework/ui-kit/ui-kit-content/less/content-11.less';
 
 @import '../framework/ui-kit/ui-kit-content/less/content-12.less';
@@ -30,7 +34,10 @@
 
 @import '../framework/ui-kit/ui-kit-content/less/content-17.less';
 
-@import '../framework/ui-kit/ui-kit-content/less/content-33.less';
+@import '../framework/ui-kit/ui-kit-content/less/content-19.less';
+
+
+@import '../framework/ui-kit/ui-kit-content/less/content-22.less';
 
 @import '../framework/ui-kit/ui-kit-content/less/content-31.less';
 
@@ -51,6 +58,7 @@
 
 header.header-8 {
     height:65px;
+    position:absolute;
     .header-background {
         background-color:transparent;
     }
@@ -64,7 +72,13 @@ header.header-8 {
             text-align:right;
             li a{
                 padding-top:18px;
+                color:white;
                 font-size:15px;
+                font-weight: normal;
+                &:hover {
+                    color:white;
+
+                }
             }
             li a.btn {
                 color:white;
@@ -89,11 +103,11 @@ header.header-8 {
     background:url('../images/placeit.jpg');
     opacity:1;
     background-size:cover;
-    background-position: center center; 
-    height:560px;
+    background-position: center -35px; 
+    height:675px;
     padding-top:125px;
     h3 {
-        font-size: 33px;
+        font-size: 40px;
         color: #444; 
         margin-bottom:6px;
     }
@@ -132,7 +146,7 @@ body > section, footer {
     padding-bottom:70px;
     p {
         font-size:15px;
-        line-height:27px;
+        line-height:25px;
     }
     &.intro {
         padding-top:45px;
@@ -142,16 +156,18 @@ body > section, footer {
         margin-bottom:17px;
     }
     h3 {
-        font-size:23px;
-        line-height:38px;
-        margin-bottom:60px;
+        font-size:38px;
+        line-height:55px;
+        margin-bottom:45px;
     }
     strong {
             color:@lp-blue;
             font-size:22px;
             font-weight:normal;
     }
-
+    .btn {
+        width:220px;
+    }
     .features {
         margin-top:90px;
         h6 {
@@ -355,6 +371,24 @@ ul.features {
         }
     }
 }
+.content-31 {
+    position:relative;
+    .bg-checklist {
+        position:relative;
+        .bg {
+            background-image:url('/static/images/screenies/checklist.png');
+            background-repeat: no-repeat;
+            background-position: left top;
+            position:absolute;
+            width:50%;
+            height:100%;
+            right:0;
+            top:0;
+            opacity: 1;
+            background-size: auto 100%;
+        }
+    }
+}
 section.privacy  {
     font-size:16px;
     color:#444;
@@ -393,3 +427,39 @@ section.privacy  {
         margin: 25px 0px 10px 0px;
     }
 }
+
+/* Landing Page */
+.header-11-sub {
+    padding: 60px 0px 0px 0px;
+    background-color: @lp-blue;
+    p {
+        color:white;
+    }
+}
+.content-features {
+    padding:60px 0px 0px 0px;
+    .a {
+        color: @orange;
+    }
+    .b {
+        color: @emerald;
+    }
+    .c {
+        color: @belize-hole;
+    }
+    span.ico {
+        font-size:65px;
+        display: block;
+
+    }
+    p {
+        font-size:15px;
+    }
+}
+.content-19 {
+    padding-top:55px;
+    border-bottom:none;
+    padding-bottom:55px;
+    background-color:#fafafa;
+}
+

@@ -2897,7 +2897,7 @@ header.header-8 .navbar a.brand img {
   background: url('../images/placeit.jpg');
   opacity: 1;
   background-size: cover;
-  background-position: center -35px;
+  background-position: center 0;
   height: 675px;
   padding-top: 125px;
 }
@@ -2985,6 +2985,10 @@ footer {
 .content-15 .features p {
   font-size: 14px;
 }
+.content-17 {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
 .content-17 .quote:before {
   content: url('../framework/common-files/icons/quote-down-mb.png');
   display: block;
@@ -2992,7 +2996,7 @@ footer {
   text-align: center;
 }
 .content-17 blockquote {
-  line-height: 1.45em;
+  line-height: 1.55em;
 }
 .content-17 .author {
   margin-top: 57px;
@@ -3230,6 +3234,11 @@ section.privacy ol ol ol ol {
 }
 section.privacy h6 {
   margin: 25px 0px 10px 0px;
+}
+section.privacy h7 {
+  margin: 18px 0px 7px 0px;
+  font-weight: bold;
+  font-size: 17px;
 }
 /* Landing Page */
 .header-11-sub {

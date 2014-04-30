@@ -2900,7 +2900,7 @@ header.header-8 .navbar a.brand img {
   background: url('../images/placeit.jpg');
   opacity: 1;
   background-size: cover;
-  background-position: center 0;
+  background-position: center center;
   height: 675px;
   padding-top: 125px;
 }

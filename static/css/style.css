@@ -2858,6 +2858,9 @@ header.header-8 {
 header.header-8 .header-background {
   background-color: transparent;
 }
+header.header-8.dark {
+  background: url('../images/placeit.jpg');
+}
 header.header-8 .navbar {
   margin-top: 8px;
   margin-bottom: 2px;
@@ -3200,6 +3203,7 @@ ul.features li span {
 section.privacy {
   font-size: 16px;
   color: #444;
+  padding-top: 100px;
 }
 section.privacy p {
   font-size: 16px;
@@ -3232,13 +3236,13 @@ section.privacy ol ol ol {
 section.privacy ol ol ol ol {
   list-style-type: lower-roman;
 }
-section.privacy h6 {
+section.privacy h5 {
   margin: 25px 0px 10px 0px;
 }
-section.privacy h7 {
-  margin: 18px 0px 7px 0px;
+section.privacy h6 {
+  margin: 25px 0px 7px 0px;
   font-weight: bold;
-  font-size: 17px;
+  font-size: 15px;
 }
 /* Landing Page */
 .header-11-sub {

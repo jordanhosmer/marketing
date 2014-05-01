@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 {% block title %}{{ title }} | LawPal{% endblock title %}
+{% block ogtags %}
+<meta property="og:title" content="{{ title }}" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lawpal.com/{{ post.path }}" />
+<meta property="og:image" content="{{ coverImg }}" />
+{% endblock ogtags %}
 {% block content %}
 
 <section class="blog-2">

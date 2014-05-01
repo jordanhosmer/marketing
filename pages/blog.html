@@ -7,7 +7,18 @@ body, html, .page-wrapper {
   height:100%;
 }
 </style>
-{% endblock %}
+{% endblock navbar %}
+
+{% block ogtags %}
+  {% for post in posts %}
+    {% if forloop.first %}
+      <meta property="og:title" content="{{ post.title }}" />
+      <meta property="og:type" content="article" />
+      <meta property="og:url" content="https://lawpal.com/{{ post.path }}" />
+      <meta property="og:image" content="{{ post.coverImg }}" />  
+    {% endif %}
+  {% endfor %}
+{% endblock ogtags %}
 
 {% block content %}
 

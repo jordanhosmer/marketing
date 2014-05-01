@@ -27,10 +27,8 @@
         <div class="visible-xs">
           <img src="{% static 'images/logo.png' %}" style="height:40px;margin-bottom:50px;">
         </div>
-        {% for post in posts %}
-          {% if forloop.first %}
-            <a href='/{{ post.path }}'><aside class="dates hidden-xs">{{ date|date:"M j" }} by {{author}}</aside></a>
-            <h3><a href='/{{ post.path }}'>{{ title }} </a></h3>
+            <a href='/{{ path }}'><aside class="dates hidden-xs">{{ date|date:"M j" }} by {{author}}</aside></a>
+            <h3><a href='/{{ path }}'>{{ title }} </a></h3>
             <p class="lead">{{ headline }}</p>
             <br />
 			{% block body %}
@@ -40,6 +38,8 @@
            <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://lawpal.com/{{ path }}" data-via="lawpalhq" data-size="large">Tweet</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
             <hr />
+        {% for post in posts %}
+          {% if forloop.first %}            
             {% if prevPost.path %}	
 	            <div class="more">
 	              <h5><a href='/{{ prevPost.path }}'>{{ prevPost.title }} </a></h5>

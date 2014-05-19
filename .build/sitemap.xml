@@ -66,6 +66,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>/posts/No-tired-associates-on-my-deal.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>/posts/show-your-lawyer-some-love.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
@@ -77,6 +82,11 @@
     </url>
     <url>
         <loc>/posts/we-are-live.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>/posts/why-checklists.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>

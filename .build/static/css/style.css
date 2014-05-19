@@ -2970,6 +2970,11 @@ footer {
   color: #1797aa;
   font-weight: normal;
 }
+.content-15 img.docs-ducks {
+  border: none!important;
+  border-color: white;
+  border-image-width: 0px 0px 0px 0px!important;
+}
 .content-15 p.lead {
   font-weight: normal;
   font-size: 17px;

@@ -2493,6 +2493,93 @@ section * {
   }
 }
 /**
+ * Price 3 stylesheet  
+ * */
+.price-3 {
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+.price-3 .plans {
+  *zoom: 1;
+}
+.price-3 .plans:before,
+.price-3 .plans:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+.price-3 .plans:after {
+  clear: both;
+}
+.price-3 .plans:before,
+.price-3 .plans:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.price-3 .plans:after {
+  clear: both;
+}
+.price-3 .plan {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  width: 33.33%;
+  text-align: center;
+  color: #bdc3c7;
+  font-size: 18px;
+}
+.price-3 .plan > * {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.price-3 .plan b {
+  color: #7f8c8d;
+  font-weight: 500;
+}
+.price-3 .plan .title {
+  color: #2c3e50;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.price-3 .plan .title .img {
+  min-height: 134px;
+}
+.price-3 .plan .price {
+  font-weight: 400;
+}
+.price-3 .plan .description {
+  margin: 30px 0 35px;
+  line-height: 28px;
+}
+.price-3 .plan .btn {
+  min-width: 170px;
+  font-weight: 500;
+}
+.price-3 .plan.plan-2 {
+  border-left: 2px solid #e5e5e5;
+  border-right: 2px solid #e5e5e5;
+}
+@media (max-width: 767px) {
+  .price-3 .plan {
+    float: none;
+    width: auto;
+  }
+  .price-3 .plan.plan-2 {
+    border: 0;
+    border-top: 2px solid #ebedee;
+    border-bottom: 2px solid #ebedee;
+    padding: 50px 0;
+    margin: 50px 0;
+  }
+}
+/**
  * Crew 2 stylesheet  
  * */
 .crew-2 {
@@ -3122,10 +3209,6 @@ footer {
     padding-bottom: 0;
   }
 }
-.price-4 h3 {
-  font-size: 30px;
-  margin: 0px 0px 30px 0px;
-}
 .crew-2 {
   padding-bottom: 0px;
 }
@@ -3277,11 +3360,135 @@ section.privacy h6 {
   font-size: 15px;
 }
 .content-19 {
-  padding-top: 55px;
+  padding-top: 75px;
   border-bottom: none;
   padding-bottom: 55px;
   background-color: #fafafa;
 }
 .content-19 .col-sm-7 .quote .quote-text {
   font-size: 31px;
+}
+section.product-tour {
+  text-align: left;
+  padding: 30px 0px;
+}
+section.product-tour h2 {
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+section.product-tour h3 {
+  font-size: 22px;
+  font-weight: normal;
+  color: #bdc3c7;
+}
+section.product-tour p.lead {
+  font-size: 21px;
+}
+section.product-tour .sign-icon {
+  font-size: 60px;
+  background-color: #2386c8;
+  padding: 28px 30px 28px 30px;
+  border-radius: 100px;
+  margin-top: 15px;
+}
+section.product-tour .pe-7s-like {
+  font-size: 120px;
+  color: #e74c3c;
+  padding: 20px 0px 0px 0px;
+}
+section.product-tour.love {
+  padding: 100px 0px 50px 0px;
+}
+section.product-tour.love .btn-hg {
+  margin-top: 70px;
+}
+section.product-tour.sign {
+  background-color: #3498db;
+  background-image: url('/static/images/sign.png');
+  background-repeat: no-repeat;
+  background-position: 85% 300px;
+  background-size: 330px;
+  padding: 90px 0px 90px 0px;
+}
+section.product-tour.sign * {
+  color: white;
+}
+section.product-tour.sign h2 {
+  font-weight: 200;
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+section.product-tour.sign p.lead {
+  color: #dcedf9;
+  font-size: 20px;
+}
+section.product-tour.alerts {
+  background-color: #e67e22;
+  background-repeat: no-repeat;
+  background-position: 85% 300px;
+  background-size: 330px;
+  padding: 90px 0px 90px 0px;
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+section.product-tour.alerts * {
+  color: white;
+}
+section.product-tour.alerts .pe-7s-bell {
+  font-size: 60px;
+  color: white;
+  padding: 20px 0px 0px 0px;
+}
+section.product-tour.alerts h2 {
+  font-weight: 200;
+  font-size: 26px;
+  margin-bottom: 16px;
+}
+section.product-tour.alerts p.lead {
+  color: #fbe9d9;
+  font-size: 18px;
+}
+.content-22.lp-tour {
+  padding: 120px 0 45px 0px;
+  background-image: url('/static/images/tour-background.png');
+  margin-bottom: 25px;
+}
+.content-22.lp-tour .fui-arrow-down {
+  font-size: 30px;
+}
+.content-22.lp-tour h3 {
+  font-size: 30px;
+  margin-bottom: 19px;
+}
+.content-22.lp-pricing {
+  background-color: #444;
+  padding: 33px 0px;
+}
+.price-header {
+  padding: 100px 0px 35px 0px;
+  background-color: #f9f9f9;
+}
+.price-header h3 {
+  font-weight: normal;
+  color: #222;
+}
+.price-3 {
+  padding-top: 70px;
+}
+.price-3 .solo {
+  background-color: #16a085;
+  color: white;
+  font-size: 70px;
+  padding: 18px 25px;
+  border-radius: 20px;
+}
+.price-3 .amlaw {
+  background-color: #8e44ad;
+  color: white;
+  font-size: 70px;
+  padding: 18px 18px;
+  border-radius: 20px;
+}
+.price-3 .plan {
+  width: 50%;
 }

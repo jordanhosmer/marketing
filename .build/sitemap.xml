@@ -11,7 +11,12 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>/how-it-works.html</loc>
+        <loc>/features.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>/index-landingpage-checklists.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
@@ -82,6 +87,11 @@
     </url>
     <url>
         <loc>/posts/we-are-live.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>/posts/why-checklists.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>

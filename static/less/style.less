@@ -46,6 +46,9 @@
 @import '../framework/ui-kit/ui-kit-contacts/less/contact-4.less';
 
 
+@import '../framework/ui-kit/ui-kit-price/less/price-3.less';
+
+
 @import '../framework/ui-kit/ui-kit-crew/less/crew-2.less';
 
 
@@ -318,12 +321,6 @@ body > section, footer {
         padding-bottom: 0;
     }
 }
-.price-4 {
-    h3 {
-        font-size:30px;
-        margin:0px 0px 30px 0px;
-    }
-}
 .crew-2 {
     padding-bottom:0px;
     h3 {
@@ -490,7 +487,7 @@ section.privacy  {
     }
 }
 .content-19 {
-    padding-top:55px;
+    padding-top:75px;
     border-bottom:none;
     padding-bottom:55px;
     background-color:#fafafa;
@@ -498,4 +495,125 @@ section.privacy  {
 .content-19 .col-sm-7 .quote .quote-text{
     font-size:31px;
 }
-
+section.product-tour {
+    text-align: left;
+    padding:30px 0px;
+    h2 {
+        font-size:26px;
+        margin-bottom:5px;
+    }
+    h3 {
+        font-size:22px;
+        font-weight: normal;
+        color:@silver;
+    }
+    p.lead {
+        font-size:21px;
+    }
+    .sign-icon {
+        font-size:60px;
+        background-color:darken(@peter-river,7%);
+        padding:28px 30px 28px 30px;
+        border-radius:100px;
+        margin-top:15px;
+    }
+    .pe-7s-like {
+        font-size:120px;
+        color:@alizarin;
+        padding:20px 0px 0px 0px;
+    }
+    &.love {
+        padding:100px 0px 50px 0px;
+        .btn-hg {
+            margin-top:70px;
+        }
+    }
+    &.sign {
+        background-color:@peter-river;
+        background-image:url('/static/images/sign.png');
+        background-repeat: no-repeat;
+        background-position: 85% 300px;
+        background-size:330px;
+        padding:90px 0px 90px 0px;
+        * {color:white;}
+          h2 {
+            font-weight:200;
+            font-size:30px;
+            margin-bottom:16px;
+        }
+        p.lead {
+            color:mix(@peter-river,white,17%);
+            font-size:20px;
+        }
+    }
+    &.alerts {
+        background-color:@carrot;
+        background-repeat: no-repeat;
+        background-position: 85% 300px;
+        background-size:330px;
+        padding:90px 0px 90px 0px;
+        margin-top:45px;
+        margin-bottom:45px;
+        * {
+            color:white;
+        }
+        .pe-7s-bell {
+            font-size:60px;
+            color:white;
+            padding:20px 0px 0px 0px;
+        }
+          h2 {
+            font-weight:200;
+            font-size:26px;
+            margin-bottom:16px;
+        }
+        p.lead {
+            color:mix(@carrot,white,17%);
+            font-size:18px;
+        }
+    }
+}
+.content-22.lp-tour {
+    padding: 120px 0 45px 0px;
+    background-image:url('/static/images/tour-background.png');
+    margin-bottom:25px;
+    .fui-arrow-down {
+        font-size:30px;
+    }
+    h3 {
+        font-size:30px;
+        margin-bottom:19px;
+    }
+}
+.content-22.lp-pricing {
+    background-color:#444;
+    padding:33px 0px;
+}
+.price-header {
+    padding:100px 0px 35px 0px;
+    h3 {
+        font-weight:200;
+        color:#222;
+    }
+    background-color:#f9f9f9;
+}
+.price-3 {
+    padding-top:70px;
+    .solo {
+        background-color:@green-sea;
+        color:white;
+        font-size:70px;
+        padding:18px 25px;
+        border-radius:20px;
+    }
+    .amlaw {
+        background-color:@wisteria;
+        color:white;
+        font-size:70px;
+        padding:18px 18px;
+        border-radius:20px;
+    }
+    .plan {
+        width:50%;
+    }
+}

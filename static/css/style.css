@@ -3465,8 +3465,7 @@ section.product-tour.alerts p.lead {
   padding: 33px 0px;
 }
 .price-header {
-  padding: 100px 0px 35px 0px;
-  background-color: #f9f9f9;
+  padding: 100px 0px 15px 0px;
 }
 .price-header h3 {
   font-weight: 500;
@@ -3474,28 +3473,36 @@ section.product-tour.alerts p.lead {
 }
 .price-header p.lead span {
   font-size: 18px;
-  background-color: yellow;
 }
-.price-3 {
-  padding-top: 70px;
+section.pricing .price {
+  font-size: 130px;
+  font-weight: 100;
+  margin: 0px 0px 20px 0px;
+  padding-left: 77px;
 }
-.price-3 .img {
-  background-color: #16a085;
-  margin: 0px 30px 0px 30px;
-  border-radius: 5px 5px 0px 0px;
+section.pricing .price span {
+  font-size: 27px;
 }
-.price-3 .solo {
-  color: white;
-  font-size: 70px;
-  padding: 18px 25px;
-  border-radius: 20px;
+section.pricing h3 {
+  font-size: 18px;
+  margin-top: 30px;
+  color: #444;
 }
-.price-3 .amlaw {
-  color: white;
-  font-size: 70px;
-  padding: 18px 18px;
-  border-radius: 20px;
+section.pricing .faq {
+  margin-top: 80px;
+  background-color: #f1f1f1;
+  padding: 40px 0px;
 }
-.price-3 .plan {
-  width: 50%;
+section.pricing p {
+  font-size: 14px;
+}
+section.pricing .btn-clear {
+  border: 1px solid #444;
+  color: #444;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+section.pricing .btn-clear:hover {
+  color: #222;
+  border-color: #222;
 }

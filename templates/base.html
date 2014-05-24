@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="{% static 'pe-icon-7-stroke/css/pe-icon-7-stroke.css' %}">
 
 	<!-- end -->
-	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}?{% now "U" %}">
 	{% block meta %}{% endblock meta %}
 
 	{% block ogtags %}{% endblock ogtags %}
@@ -49,8 +49,8 @@
 						</div>
 						<div class="collapse navbar-collapse">
 							<ul class="nav text-right pull-right"> 
-<!-- 								<li><a href="/features.html">Features</a></li>
-								<li><a href="/pricing.html">Pricing</a></li> -->
+ 								<li><a href="/features.html">Features</a></li>
+								<li><a href="/pricing.html">Pricing</a></li>
 								<li><a href="/blog.html">Blog</a></li>
 								<li class="hidden-sm hidden-xs"><a class="prereg" href="http://app.lawpal.com/">Sign In</a></li>
 								<li class="hidden-sm hidden-xs"><a class="btn btn-success prereg" href="http://app.lawpal.com/start/signup/">Try LawPal</a></li>

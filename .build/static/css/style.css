@@ -2963,6 +2963,7 @@ header.header-8 .navbar .nav li a {
   color: white;
   font-size: 15px;
   font-weight: normal;
+  text-shadow: 1px 1px 1px #666;
 }
 header.header-8 .navbar .nav li a:hover {
   color: white;

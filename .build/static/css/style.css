@@ -3424,29 +3424,29 @@ section.product-tour.sign p.lead {
   font-size: 20px;
 }
 section.product-tour.alerts {
-  background-color: #e67e22;
+  background-color: white;
   background-repeat: no-repeat;
   background-position: 85% 300px;
   background-size: 330px;
   padding: 90px 0px 90px 0px;
-  margin-top: 45px;
-  margin-bottom: 45px;
+  margin-top: 15px;
+  margin-bottom: 50px;
 }
 section.product-tour.alerts * {
-  color: white;
+  color: #e67e22;
 }
 section.product-tour.alerts .pe-7s-bell {
   font-size: 60px;
-  color: white;
+  color: #e67e22;
   padding: 20px 0px 0px 0px;
 }
 section.product-tour.alerts h2 {
-  font-weight: 200;
+  font-weight: normal;
   font-size: 26px;
   margin-bottom: 16px;
 }
 section.product-tour.alerts p.lead {
-  color: #fbe9d9;
+  color: #e98f3f;
   font-size: 18px;
 }
 .content-22.lp-tour {

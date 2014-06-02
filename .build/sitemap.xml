@@ -26,6 +26,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>/l/legal-document-management.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>/legal-project-management.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>

@@ -61,6 +61,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>/posts/de_facto_project_management.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>/posts/engagement-letter-part-1.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>

@@ -59,7 +59,8 @@ def production():
     env.user = 'ubuntu'
     env.application_user = 'app'
     # connect to the port-forwarded ssh
-    env.hosts = ['ec2-184-169-191-190.us-west-1.compute.amazonaws.com', 'ec2-184-72-21-48.us-west-1.compute.amazonaws.com'] if not env.hosts else env.hosts
+    env.hosts = ['ec2-50-18-33-186.us-west-1.compute.amazonaws.com',
+                 'ec2-54-241-222-221.us-west-1.compute.amazonaws.com',] if not env.hosts else env.hosts
     env.celery_name = 'celery-production' # taken from chef cookbook
 
     env.key_filename = '%s/../lawpal-chef/chef-machines.pem' % env.local_project_path
@@ -68,6 +69,11 @@ def production():
     env.stop_service = None
     env.light_restart = None
 
+
+env.roledefs.update({
+    'web': ['ec2-50-18-33-186.us-west-1.compute.amazonaws.com'],
+    'worker': ['ec2-54-241-222-221.us-west-1.compute.amazonaws.com'],
+})
 
 def env_run(cmd):
     return sudo(cmd) if env.environment_class in ['production', 'celery'] else run(cmd)

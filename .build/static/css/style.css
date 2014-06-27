@@ -2940,7 +2940,6 @@ section * {
 }
 header.header-8 {
   height: 65px;
-  position: absolute;
 }
 header.header-8 .header-background {
   background-color: transparent;
@@ -2960,21 +2959,21 @@ header.header-8 .navbar .nav {
 }
 header.header-8 .navbar .nav li a {
   padding-top: 18px;
-  color: white;
   font-size: 15px;
   font-weight: normal;
-  text-shadow: 1px 1px 1px #666;
-}
-header.header-8 .navbar .nav li a:hover {
-  color: white;
 }
 header.header-8 .navbar .nav li a.btn {
-  color: white;
   height: inherit;
   padding: 8px 13px;
+  color: white;
+  font-size: 15px;
+  text-transform: uppercase;
 }
 header.header-8 .navbar .nav li a.btn:hover {
   background-color: #2ecc71;
+}
+header.header-8 .navbar .navbar-toggle {
+  height: 16px;
 }
 header.header-8 .navbar a.brand {
   padding-top: 20px;
@@ -2993,7 +2992,8 @@ header.header-8 .navbar a.brand img {
   padding-top: 125px;
 }
 .bg-lawpal-preview h3 {
-  font-size: 40px;
+  font-size: 35px;
+  text-transform: uppercase;
   color: #444;
   margin-bottom: 6px;
 }
@@ -3032,7 +3032,7 @@ footer {
   padding-bottom: 70px;
 }
 .content-15 p {
-  font-size: 15px;
+  font-size: 14px;
   line-height: 25px;
 }
 .content-15.intro {
@@ -3043,14 +3043,15 @@ footer {
   margin-bottom: 17px;
 }
 .content-15 h3 {
-  font-size: 55px;
-  line-height: 68px;
+  font-size: 40px;
+  line-height: 50px;
   margin-bottom: 10px;
+  text-transform: uppercase;
 }
 .content-15 h4 {
   margin-top: 4px;
   margin-bottom: 40px;
-  font-size: 21px;
+  font-size: 18px;
   font-weight: normal;
   color: #888;
 }
@@ -3065,11 +3066,13 @@ footer {
 }
 .content-15 p.lead {
   font-weight: normal;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.4em;
 }
 .content-15 .btn {
   width: 220px;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 .content-15 .features {
   margin-top: 90px;

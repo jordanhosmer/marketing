@@ -61,7 +61,6 @@
 
 header.header-8 {
     height:65px;
-    position:absolute;
     .header-background {
         background-color:transparent;
     }
@@ -78,23 +77,25 @@ header.header-8 {
             text-align:right;
             li a{
                 padding-top:18px;
-                color:white;
                 font-size:15px;
                 font-weight: normal;
-                text-shadow:1px 1px 1px #666;
                 &:hover {
-                    color:white;
 
                 }
             }
             li a.btn {
-                color:white;
                 height: inherit;
                 padding:8px 13px;
+                color:white;
+                font-size:15px;
+                text-transform: uppercase;
                 &:hover {
                     background-color:@brand-success;
                 }
             }
+        }
+        .navbar-toggle {
+            height: 16px;
         }
         a.brand {
             padding-top:20px;
@@ -114,7 +115,8 @@ header.header-8 {
     height:675px;
     padding-top:125px;
     h3 {
-        font-size: 40px;
+        font-size: 35px;
+        text-transform: uppercase;
         color: #444; 
         margin-bottom:6px;
     }
@@ -152,7 +154,7 @@ body > section, footer {
     padding-top:0px;
     padding-bottom:70px;
     p {
-        font-size:15px;
+        font-size:14px;
         line-height:25px;
     }
     &.intro {
@@ -163,14 +165,15 @@ body > section, footer {
         margin-bottom:17px;
     }
     h3 {
-        font-size:55px;
-        line-height:68px;
+        font-size:40px;
+        line-height:50px;
         margin-bottom:10px;
+        text-transform: uppercase;
     }
     h4 {
         margin-top:4px;
         margin-bottom:40px;
-        font-size:21px;
+        font-size:18px;
         font-weight: normal;
         color:#888;
     }
@@ -185,12 +188,14 @@ body > section, footer {
         }
     p.lead {
         font-weight: normal;
-        font-size: 17px;
+        font-size: 16px;
         line-height: 1.4em;
 
     }
     .btn {
         width:220px;
+        text-transform: uppercase;
+        font-size:14px;
     }
     .features {
         margin-top:90px;
